@@ -1,87 +1,681 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>My E-Commerce Store</title>
-    <link rel="Stylesheet"  href="asset/css/style.css">
-    <link rel="Stylesheet"  href="asset/css/footer.css">
+  <title>My E-Commerce Store</title>
+  <link rel="Stylesheet" href="asset/css/style.css" />
+ 
+  <link rel="Stylesheet" href="asset/css/footer.css" />
+  <style>* {
+    font-family: Nunito, sans-serif;
+  }
+  
+  .responsive-container-block {
+    min-height: 75px;
+    height: fit-content;
+    width: 100%;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    justify-content: flex-start;
+  }
+  
+  .text-blk {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    line-height: 25px;
+  }
+  
+  .responsive-container-block.bigContainer {
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mainImg {
+    color: black;
+    width: 55%;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 10px 7px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .text-blk.headingText {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 34px;
+    color: rgb(51, 51, 51);
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+  
+  .allText {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    width: 40%;
+    margin: 0 0 0 0;
+  }
+  
+  .text-blk.subHeadingText {
+    color: rgb(102, 102, 102);
+    font-size: 25px;
+    line-height: 34px;
+    font-weight: 700;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    margin-left: 0px;
+  }
+  
+  .text-blk.description {
+    font-size: 16px;
+    line-height: 34px;
+    color: rgb(102, 102, 102);
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+  }
+  
+  .explore {
+    font-size: 20px;
+    line-height: 28px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(244, 152, 146);
+    padding-top: 10px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-left: 50px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-style: outset;
+    border-right-style: outset;
+    border-bottom-style: outset;
+    border-left-style: outset;
+    border-top-color: rgb(244, 152, 146);
+    border-right-color: rgb(244, 152, 146);
+    border-bottom-color: rgb(244, 152, 146);
+    border-left-color: rgb(244, 152, 146);
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    cursor: pointer;
+  }
+  
+  .explore:hover {
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat-x: initial;
+    background-repeat-y: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(255, 235, 234);
+    color: rgb(244, 152, 146);
+  }
+  
+  .responsive-container-block.Container {
+    margin-top: 80px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    max-width: 1320px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+  
+  .responsive-container-block.Container.bottomContainer {
+    margin-top: 100px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    flex-direction: row-reverse;
+    margin: 100px auto 50px auto;
+  }
+  
+  .allText.aboveText {
+    margin: 0 0 0 40px;
+  }
+  
+  .allText.bottomText {
+    margin: 0 40px 0 0;
+  }
+  
+  @media (max-width: 1024px) {
+    .responsive-container-block.Container {
+      max-width: 850px;
+    }
+  
+    .mainImg {
+      width: 55%;
+      height: auto;
+    }
+  
+    .text-blk.description {
+      font-size: 16px;
+    }
+  
+    .allText {
+      width: 40%;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      margin-left: 20px;
+    }
+  
+    .responsive-container-block.bigContainer {
+      padding-top: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+    }
+  
+    .text-blk.subHeadingText {
+      font-size: 22px;
+    }
+  
+    .responsive-container-block.Container.bottomContainer {
+      margin: 80px auto 50px auto;
+    }
+  
+    .responsive-container-block.Container {
+      max-width: 830px;
+    }
+  
+    .allText.aboveText {
+      margin: 30px 0 0 40px;
+    }
+  
+    .allText.bottomText {
+      margin: 30px 40px 0 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mainImg {
+      width: 90%;
+    }
+  
+    .allText {
+      width: 100%;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+    }
+  
+    .responsive-container-block.Container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .text-blk.headingText {
+      text-align: center;
+    }
+  
+    .text-blk.subHeadingText {
+      text-align: center;
+      font-size: 25px;
+    }
+  
+    .text-blk.description {
+      text-align: center;
+      font-size: 16px;
+    }
+  
+    .allText {
+      margin-top: 40px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+    }
+  
+    .allText.aboveText {
+      margin: 40px 0 0 0;
+    }
+  
+    .responsive-container-block.Container {
+      margin: 80px auto 50px auto;
+    }
+  
+    .responsive-container-block.Container.bottomContainer {
+      margin: 50px auto 50px auto;
+    }
+  
+    .allText.bottomText {
+      margin: 40px 0 0 0;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .responsive-container-block.Container {
+      padding-top: 10px;
+      padding-right: 0px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .mainImg {
+      width: 100%;
+    }
+  
+    .responsive-container-block.bigContainer {
+      padding-top: 10px;
+      padding-right: 25px;
+      padding-bottom: 10px;
+      padding-left: 25px;
+    }
+  
+    .text-blk.subHeadingText {
+      font-size: 25px;
+      padding-top: 0px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+    }
+  
+    .text-blk.description {
+      font-size: 16px;
+      padding-top: 0px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+    }
+  
+    .allText {
+      padding-top: 0px;
+      padding-right: 0px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      width: 100%;
+    }
+  } </style></style>
 </head>
+
+  
 <body>
+  <ul class="navbarI">
+    <li><img src="asset/images/logo (3).png" alt="" width="50px" height="50px" class="navImg"></li>
+    <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="aboutUs.html">About Us</a></li>
+      <li class="login">
+        <a href="login-signup.html" image src="asset/images/icons/login-signup.png">Login/Signup</a>
+      </li>
+      <!-- Move the login link to the right-most position -->
+      <li class="cart"><a href="cart.html" i>Cart </a></li>
+    </div>
+    
+  </ul>
 
-    <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="aboutUs.html">About Us</a></li>
-        <li class="login"><a href="login-signup.html" image src="asset/images/icons/login-signup.png">Login/Signup</a></li> <!-- Move the login link to the right-most position -->
-        <li class="cart"><a href="cart.html" i>Cart </a> </li>
-      </ul>
 
+
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+     
+      <img src="asset/images/banner/banner_2.jpg" class="imgb" style="width:100%">
+      <div class="text fade "><h1 class=" text-white">Welcome to Samee Products.</h1>
+        <h1 class="display-1 text-white mb-md-3 mb-sm-3 mb-lg-5 ">
+          Experience the real taste of spices with us!
+        </h1>
+        <h2 class="fs-4 text-white animated slideInUp mb-md-3 mb-sm-3 mb-lg-5">
+          ගමේ රසය ලංකාවටම..😋 <br />දේශීය කුලුබඩු වලින්ම නිපදවූ සමී නිශ්පාදන 100 %ක්
+          ම ශ්‍රී ලාංකික නිශ්පාදනයකි.
+        </h2></div>
+    </div>
+    <div class="mySlides fade">
       
-            
-      <p class="fs-4 text-white">Welcome to Samee Products.</p>
-      <h1 class="display-1 text-white mb-md-3 mb-sm-3 mb-lg-5  animated slideInRight">Experience the real taste of spices with us!</h1>
-      <p class="fs-4 text-white animated slideInUp mb-md-3 mb-sm-3 mb-lg-5 ">ගමේ රසය ලංකාවටම..😋 <br>දේශීය කුලුබඩු වලින්ම නිපදවූ සමී නිශ්පාදන 100 %ක් ම ශ්‍රී ලාංකික නිශ්පාදනයකි.</p>
-      <a href="shop.php" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInLeft ">Our Shop</a> 
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                    <img src="asset/images/banner/banner_2.jpg" alt="First Image" width="100%">
-                    
+      <img src="asset/images/banner/banner_3.jpg" class="imgb" style="width:100%">
+      <div class="text fade"><h1 class="fs-4 text-white">Welcome to Samee Products.</h1>
+        <h1 class="display-1 text-white mb-md-3 mb-sm-3 mb-lg-5">
+          Experience the real taste of spices with us!
+        </h1>
+        <h2 class="fs-4 text-white animated slideInUp mb-md-3 mb-sm-3 mb-lg-5">
+          ගමේ රසය ලංකාවටම..😋 <br />දේශීය කුලුබඩු වලින්ම නිපදවූ සමී නිශ්පාදන 100 %ක්
+          ම ශ්‍රී ලාංකික නිශ්පාදනයකි.
+        </h2></div>
+    </div>
+    <div class="mySlides fade">
+      
+      <img src="asset/images/banner/spices-2548653_1920.jpg" class="imgb" style="width:100%">
+      <div class="text fade"><h1 class="fs-4 text-white">Welcome to Samee Products.</h1>
+        <h1 class="display-1 text-white mb-md-3 mb-sm-3 mb-lg-5 ">
+          Experience the real taste of spices with us!
+        </h1>
+        <h2 class="fs-4 text-white animated slideInUp mb-md-3 mb-sm-3 mb-lg-5">
+          ගමේ රසය ලංකාවටම..😋 <br />දේශීය කුලුබඩු වලින්ම නිපදවූ සමී නිශ්පාදන 100 %ක්
+          ම ශ්‍රී ලාංකික නිශ්පාදනයකි.
+        </h2></div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+  <!-- <p class="fs-4 text-white">Welcome to Samee Products.</p>
+  <h1 class="display-1 text-white mb-md-3 mb-sm-3 mb-lg-5 animated slideInRight">
+    Experience the real taste of spices with us!
+  </h1>
+  <p class="fs-4 text-white animated slideInUp mb-md-3 mb-sm-3 mb-lg-5">
+    ගමේ රසය ලංකාවටම..😋 <br />දේශීය කුලුබඩු වලින්ම නිපදවූ සමී නිශ්පාදන 100 %ක්
+    ම ශ්‍රී ලාංකික නිශ්පාදනයකි.
+  </p>
+  <a href="shop.php" class="btn btn-secondary rounded-pill py-3 px-5 animated slideInLeft">Our Shop</a>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="asset/images/banner/banner_2.jpg" alt="First Image" width="100%" />
+    </div>
+    <div class="mySlides fade">
+      <img src="asset/images/banner/banner_3.jpg" alt="Second Image" width="100%" />
+    </div>
+  </div> -->
+  <!-- <script>
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 6000); //Change image every 2 seconds
+    }
+  </script> -->
+  <div class="responsive-container-block bigContainer">
+    <div class="responsive-container-block Container">
+      <img class="mainImg" src="asset/images/home2.jpg">
+      <div class="allText aboveText">
+        <h1 class="text-blk headingText">
+          Quality spices in Sri lanka
+        </h1>
+        <p class="text-blk description">
+          Welcome to Samee Products your number one source for all spices We're dedicated to giving you the high quality of spices . We Provide local ingredients and non-toxic spices. In case you are hearing about spices for the first time, count yourself lucky for visiting us at www.sameeproducts.lk
+        </p>
+        <p class="text-blk description">
+          Founded in 2019 by M.R Sameesha Weeragoda (CEO ), Samee Products has come a long way from its beginnings in a ganemulla. We now serve customers all over Sri Lanka. We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions, please don't hesitate to contact us.
+        </p>
+        
+        <button class="explore">
+          Explore
+        </button>
+      </div>
+    </div>
+    <div class="responsive-container-block Container bottomContainer">
+      <img class="mainImg" src="asset/images/home1.png">
+      <div class="allText bottomText">
+        <p class="text-blk headingText">
+          Few Reasons Why People Choosing Us!
+        </p>
+        
+        <p class="text-blk description">
+          The process of continuous steam sterilisation is the safest internationally approved method to reduce microbe counts to safe levels.
+        </p>
+        <p class="text-blk description">
+          The process gives consistent results using an electrically heated screw along with saturated steam, superheated dry steam, or no steam at all – depending on the degree of contamination.
+          <p><i><img src="asset/icons/check.png" width="16px" height="16px"></i>Organic - 100%</p>
+          <p><i><img src="asset/icons/check.png" width="16px" height="16px"></i>Customer Service - 100%</p>
+          <p><i><img src="asset/icons/check.png" width="16px" height="16px"></i>Time Delevery - 100%</p>
+        </p>
+      </br>
+        <button class="explore">
+          Explore
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- start of the footer-->
+
+  <div class = "products">
+    <div class = "container">
+        <h1 class = "lg-title">Home made Spices Offers</h1>
+        <p class = "text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quos sit consectetur, ipsa voluptatem vitae necessitatibus dicta veniam, optio, possimus assumenda laudantium. Temporibus, quis cum.</p>
+
+        <div class = "product-items">
+            <!-- single product -->
+            <div class = "product">
+                <div class = "product-content">
+                    <div class = "product-img">
+                        <img src = "asset/images/1 (1).png" class="img1" alt = "product image">
+                    </div>
+                    <div class = "product-btns">
+                        <button type = "button" class = "btn-cart"> add to cart
+                            <span><i class = "fas fa-plus"></i></span>
+                        </button>
+                        <button type = "button" class = "btn-buy"> buy now
+                            <span><i class = "fas fa-shopping-cart"></i></span>
+                        </button>
+                    </div>
                 </div>
-                    <div class="mySlides fade">
-                    <img src="asset/images/banner/banner_3.jpg" alt="Second Image" width="100%">
-                    
+
+                <div class = "product-info">
+                    <div class = "product-info-top">
+                        <h2 class = "sm-title">Chili</h2>
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                    </div>
+                    <a href = "#" class = "product-name">Chili Powder</a>
+                    <p class = "product-price">$ 150.00</p>
+                    <p class = "product-price">$ 133.00</p>
+                </div>
+
+                <div class = "off-info">
+                    <h2 class = "sm-title">25% off</h2>
                 </div>
             </div>
-            <script> 
-                let slideIndex = 0;  
-                showSlides();  
-                function showSlides() {   
-                    let i;   
-                    let slides = document.getElementsByClassName("mySlides");  
-                    for (i = 0; i < slides.length; i++){      
-                        slides[i].style.display = "none";   
-                    }  
-                    slideIndex++;   
-                    if (slideIndex > slides.length)   
-                    {slideIndex = 1
-                    }   
-                    slides[slideIndex-1].style.display = "block";  
-                    setTimeout(showSlides, 6000); //Change image every 2 seconds  
-                } 
-                        
-            </script>
-<h1>Welcome to Our E-Commerce Store</h1>
-<p>Explore a wide range of products at the best prices!</p>
+            <!-- end of single product -->
+            <!-- single product -->
+            <div class = "product">
+                <div class = "product-content">
+                    <div class = "product-img">
+                        <img src = "asset/images/1 (2).png" class="img1" alt = "product image">
+                    </div>
+                    <div class = "product-btns">
+                        <button type = "button" class = "btn-cart"> add to cart
+                            <span><i class = "fas fa-plus"></i></span>
+                        </button>
+                        <button type = "button" class = "btn-buy"> buy now
+                            <span><i class = "fas fa-shopping-cart"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class = "product-info">
+                    <div class = "product-info-top">
+                        <h2 class = "sm-title">Chili</h2>
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                    </div>
+                    <a href = "#" class = "product-name">Chili Powder</a>
+                    <p class = "product-price">$ 150.00</p>
+                    <p class = "product-price">$ 133.00</p>
+                </div>
+            </div>
+            <!-- end of single product -->
+            <!-- single product -->
+            <div class = "product">
+                <div class = "product-content">
+                    <div class = "product-img">
+                        <img src = "asset/images/1 (4).png" class="img1" alt = "product image">
+                    </div>
+                    <div class = "product-btns">
+                        <button type = "button" class = "btn-cart"> add to cart
+                            <span><i class = "fas fa-plus"></i></span>
+                        </button>
+                        <button type = "button" class = "btn-buy"> buy now
+                            <span><i class = "fas fa-shopping-cart"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class = "product-info">
+                    <div class = "product-info-top">
+                        <h2 class = "sm-title">Chili</h2>
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                    </div>
+                    <a href = "#" class = "product-name">Chili Powder</a>
+                    <p class = "product-price">$ 150.00</p>
+                    <p class = "product-price">$ 133.00</p>
+                </div>
+            </div>
+            <!-- end of single product -->
+            <!-- single product -->
+            <div class = "product">
+                <div class = "product-content">
+                    <div class = "product-img">
+                        <img src = "asset/images/1 (1).png" class="img1" alt = "product image">
+                    </div>
+                    <div class = "product-btns">
+                        <button type = "button" class = "btn-cart"> add to cart
+                            <span><i class = "fas fa-plus"></i></span>
+                        </button>
+                        <button type = "button" class = "btn-buy"> buy now
+                            <span><i class = "fas fa-shopping-cart"></i></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class = "product-info">
+                    <div class = "product-info-top">
+                        <h2 class = "sm-title">Chili</h2>
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                    </div>
+                    <a href = "#" class = "product-name">Chili Powder</a>
+                    <p class = "product-price">$ 150.00</p>
+                    <p class = "product-price">$ 133.00</p>
+                </div>
+
+                <div class = "off-info">
+                    <h2 class = "sm-title">25% off</h2>
+                </div>
+            </div>
+            <!-- end of single product -->
+            
+            
+        </div>
+    </div>
+    <a class="explore btnC" href="product.html" >
+    Explore more
+    </a>
+</div>
 
 
-<!-- start of contact us function -->
 
-<!--end pof the contact us function-->
-<footer class="footer-distributed">
+  <!-- start of contact us function -->
 
+  <!--end pof the contact us function-->
+  <footer class="footer-distributed">
     <div class="footer-left">
-
-      <h3>Company<span>logo</span></h3>
+      <a href="index.html"><img src="asset/images/logo (3).png" alt=""></a>
 
       <p class="footer-links">
-        <a href="#" class="link-1">Home</a>
+        <a href="index.html" class="link-1">Home</a>
+
+        <a href="product.html">Product</a>
+
+        <a href="contact.html">Contact Us</a>
+
+        <a href="aboutUs.html">About Us</a>
+
         
-        <a href="#">Blog</a>
-      
-        <a href="#">Pricing</a>
-      
-        <a href="#">About</a>
-        
-        <a href="#">Faq</a>
-        
-        <a href="#">Contact</a>
       </p>
 
-      <p class="footer-company-name">Company Name © 2015</p>
+      <p class="footer-company-name">Samee Product © 2015</p>
     </div>
 
     <div class="footer-center">
-
       <div>
         <i class="fa fa-map-marker"></i>
         <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
@@ -96,29 +690,24 @@
         <i class="fa fa-envelope"></i>
         <p><a href="mailto:support@company.com">support@company.com</a></p>
       </div>
-
     </div>
 
     <div class="footer-right">
-
       <p class="footer-company-about">
-        <span>About the company</span>
-        Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+        
+          ගමේ රසය ලංකාවටම..😋දේශීය කුලුබඩු වලින්ම නිපදවූ සමී නිශ්පාදන 100 %ක්
+          ම ශ්‍රී ලාංකික නිශ්පාදනයකි.
       </p>
 
       <div class="footer-icons">
-
         <a href="#"><i class="fa fa-facebook"></i></a>
         <a href="#"><i class="fa fa-twitter"></i></a>
         <a href="#"><i class="fa fa-linkedin"></i></a>
         <a href="#"><i class="fa fa-github"></i></a>
-
       </div>
-
     </div>
-
   </footer>
+  <script src="asset/js/script.js"></script>
 </body>
+
 </html>
-
-

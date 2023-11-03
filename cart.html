@@ -1,79 +1,86 @@
-<html> 
-  <head> <link rel="stylesheet" href="asset/css/cart.css"></head>
-  <body>
-<!----cart items---->
-<div class="small-container cart-page">
-  <table>
-      <tr>
-          <th>Product</th>
-          <th>Quantity</th>
-          <th>Subtotal</th>
-      </tr>
-      <tr>
-          <td>
-              <div class="cart-info">
-                  <img src="C:\Users\User\Documents\HTML\perfume\product-1.png">
-                  <div>
-                      <p>4711 ACQUA COLONIA COLOGNE INTENSE
-                          PURE BREEZE OF HIMALAYA</p>
-                          <small>Price:4000 LKR</small>
-                          <br>
-                          <a href="">Remove</a>
-                  </div>
-              </div>
-          </td>
-          <td><input type="number" value="1"></td>
-          <td>4000 LKR</td>
-      </tr>
-      <tr>
-          <td>
-              <div class="cart-info">
-                  <img src="C:\Users\User\Documents\HTML\perfume\product-2.png">
-                  <div>
-                      <p>4711 ACQUA COLONIA COLOGNE INTENSE
-                          >SUNNY SEASIDE OF ZANZIBAR</p>
-                          <small>Price:4200 LKR</small>
-                          <br>
-                          <a href="">Remove</a>
-                  </div>
-              </div>
-          </td>
-          <td><input type="number" value="1"></td>
-          <td>4200 LKR</td>
-      </tr>
-      <tr>
-          <td>
-              <div class="cart-info">
-                  <img src="C:\Users\User\Documents\HTML\perfume\product-3.png">
-                  <div>
-                      <p>4711 ACQUA COLONIA COLOGNE INTENSE
-                          WAKENING WOODS</p>
-                          <small>Price:3500 LKR</small>
-                          <br>
-                          <a href="">Remove</a>
-                  </div>
-              </div>
-          </td>
-          <td><input type="number" value="1"></td>
-          <td>3500 LKR</td>
-      </tr>
-  </table>
-  <div class="total-ptice">
-      <table>
-          <tr>
-              <td>Subtotal</td>
-              <td>11700</td>
-          </tr>
-          <tr>
-              <td>Offer</td>
-              <td>400</td>
-          </tr>
-          <tr>
-              <td>Total</td>
-              <td>11300</td>
-          </tr>
-      </table>
-  </div>
-</div>              
-</body>  
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shopping Cart UI</title>
+	<link rel="stylesheet" type="text/css" href="asset/css/cart.css">
+	<link rel="stylesheet" type="text/css" href="asset/css/style.css">
+	<link href="" rel="stylesheet">
+</head>
+<body>
+  <ul class="navbarI">
+    <li><img src="asset/images/logo (3).png" alt="" width="50px" height="50px" class="navImg"></li>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="aboutUs.html">About Us</a></li>
+      <li class="login">
+        <a href="login-signup.html" image src="asset/images/icons/login-signup.png">Login/Signup</a>
+      </li>
+      <!-- Move the login link to the right-most position -->
+      <li class="cart"><a href="cart.html" i>Cart </a></li>
+    </div>
+    
+  </ul>
+  <section class="sec">
+    <div class="CartContainer">
+      <div class="Header">
+        <h3 class="Heading">Shopping Cart</h3>
+        <h5 class="Action">Remove all</h5>
+      </div>
+
+      <div class="Cart-Items">
+          <div class="image-box">
+            <img src="asset/images/1 (1).png" style={{ height="120px" }} />
+          </div>
+          <div class="about">
+            <h1 class="title">Chili pieces</h1>
+            <h3 class="subtitle">250g</h3>
+            <img src="asset/images/1 (1).png" style={{ height="30px" }}/>
+          </div>
+          <div class="counter">
+            <div class="btn">+</div>
+            <div class="count">2</div>
+            <div class="btn">-</div>
+          </div>
+          <div class="prices">
+            <div class="amount">$2.99</div>
+            <div class="save"><u>Save for later</u></div>
+            <div class="remove"><u>Remove</u></div>
+          </div>
+      </div>
+
+      <div class="Cart-Items pad">
+      <div class="image-box">
+        <img src="asset/images/1 (1).png" style={{ height="120px" }} />
+      </div>
+      <div class="about">
+        <h1 class="title">Chili pieces</h1>
+        <h3 class="subtitle">250g</h3>
+        <img src="asset/images/1 (1).png" style={{ height="30px" }}/>
+      </div>
+      <div class="counter">
+        <div class="btn">+</div>
+        <div class="count">2</div>
+        <div class="btn">-</div>
+      </div>
+      <div class="prices">
+        <div class="amount">$2.99</div>
+        <div class="save"><u>Save for later</u></div>
+        <div class="remove"><u>Remove</u></div>
+      </div>
+      </div>
+    <hr> 
+    <div class="checkout">
+    <div class="total">
+      <div>
+        <div class="Subtotal">Sub-Total</div>
+        <div class="items">2 items</div>
+      </div>
+      <div class="total-amount">$6.18</div>
+    </div>
+    <button class="button">Checkout</button></div>
+ </div>
+  </section>
+  
+</body>
 </html>
