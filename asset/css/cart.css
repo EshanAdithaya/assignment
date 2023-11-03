@@ -1,17 +1,12 @@
+/*--cart--*/
 .cart-page{
-  margin: 80 px auto;
+  margin: 80px;
 }
-.submit_button{
-
-  vertical-align: bottom;
-align-content: end;
-}
-
-table {
+table{
   width: 100%;
-  border-collapse:collapse ;
+  border-collapse: collapse;
 }
-.card-info{
+.cart-info{
   display: flex;
   flex-wrap: wrap;
 }
@@ -22,7 +17,6 @@ th{
   background: #ff523b;
   font-weight: normal;
 }
-
 td{
   padding: 10px 5px;
 }
@@ -40,24 +34,18 @@ td img{
   height: 80px;
   margin-right: 10px;
 }
-td data{
-  width: 40px;
-  height: 30px;
-  padding: 5px;
-}
-.total-price{
+.total-ptice{
   display: flex;
   justify-content: flex-end;
-
 }
-.total-price table{
-  border-top:3px solid #ff523b ;
+.total-ptice table{
+  border-top: 3px solid #ff523b;
   width: 100%;
-  max-width:600px;
+  max-width: 400px;
 }
 td:last-child{
   text-align: right;
 }
-th:last-child{
+td:last-child{
   text-align: right;
 }
